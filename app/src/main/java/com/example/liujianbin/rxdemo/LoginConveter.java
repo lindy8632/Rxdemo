@@ -13,7 +13,7 @@ public class LoginConveter extends KKBaseCoveter<String, List<Integer>>
         List b  = new ArrayList();
         b.add(1);
         b.add(3);
-        b.add(5);
+        b.add(5);//
         return b;
     }
 }
