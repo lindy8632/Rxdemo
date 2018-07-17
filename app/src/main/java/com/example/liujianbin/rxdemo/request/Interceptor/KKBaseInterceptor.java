@@ -5,7 +5,7 @@ import com.zhouyou.http.request.BaseRequest;
 
 abstract public class KKBaseInterceptor<T>
 {
-    public boolean willStart() {return true;};
+    public boolean willStart() {return true;}
     public boolean willExecute(BaseRequest request) { return true; };
     //public HashMap<String, String> canModifyParams(HashMap<String, String> params) { return params; };
     public KKBaseInterceptorResult onReceieve(T object) { return null; };

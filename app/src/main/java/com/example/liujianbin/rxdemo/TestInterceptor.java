@@ -33,7 +33,7 @@ public class TestInterceptor extends KKBaseInterceptor<JSONObject>
         r.setMessage("12");
         try
         {
-            r.setData(object.get("creditService"));
+            r.setData(object.toString());
         }
         catch (Exception e)
         {

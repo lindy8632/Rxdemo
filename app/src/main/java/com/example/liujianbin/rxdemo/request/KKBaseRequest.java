@@ -193,6 +193,8 @@ abstract public class KKBaseRequest<U,V>
                 Log.e("jimmy", "跳过, 类型不匹配");
             }
 
+
+            //适配类型不匹配的情况
             try
             {
                 if ( target!= null )

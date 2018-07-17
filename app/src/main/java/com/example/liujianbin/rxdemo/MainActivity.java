@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.example.liujianbin.rxdemo.request.KKRequestManager;
+import com.example.liujianbin.rxdemo.request.jsonHelper.JsonHelper;
 
 import java.util.List;
 
@@ -79,8 +80,8 @@ public class MainActivity extends AppCompatActivity
 //            Log.e("jimmy", "最后 请求结束");
 //        });
 
-        new ServiceRequest().execute().onSuccess((ServiceInfo info) ->{
-            Log.e("jimmy", "ServiceRequest()最后 请求成功： " + info.getCreditService());
+        new ServiceRequest().execute().addCoveter(new ServiceConveter()).onSuccess((ServiceInfo info) ->{
+            Log.e("jimmy", "ServiceRequest()最后 请求成功： " + info.getCreditService().get(0).getName());
         }).onFailed( e -> {
             Log.e("jimmy", "ServiceRequest()最后 请求失败");
         }).onComplete( e -> {
